@@ -1,5 +1,5 @@
-//Flavius Ciapsa
-//Marcos Herrero
+// 
+// 
 
 package simulator.launcher;
 

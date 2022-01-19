@@ -1,4 +1,4 @@
-//Falvius Ciapsa y Marcos Herrero
+//Falvius  y  
 package tp.p3.exceptions;
 
 public class UnableToAddGameObjectException extends Exception {

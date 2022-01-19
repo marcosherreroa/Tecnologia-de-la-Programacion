@@ -1,4 +1,4 @@
-//Flavius Ciapsa y Marcos Herrero
+//  y  
 package simulator.control;
 
 import java.io.IOException;

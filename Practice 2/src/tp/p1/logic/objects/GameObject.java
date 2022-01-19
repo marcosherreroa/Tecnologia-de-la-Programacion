@@ -1,4 +1,4 @@
-//Flavius Ciapsa y Marcos Herrero
+//  y  
 
 package tp.p1.logic.objects;
 

@@ -1,5 +1,5 @@
-//Alumnos: Marcos Herrero Agustin
-//         Flavius Abel Ciapsa
+//Alumnos:   
+//           
 
 package tp.p1;
 

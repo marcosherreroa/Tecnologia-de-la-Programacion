@@ -17,7 +17,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JL;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
@@ -41,14 +41,14 @@ public class ControlPanel extends JPanel implements SimulatorObserver{
 	
 	private Set<JButton> toDisable;
 	
-	public static final String STEPSELECTORLABEL = "Steps:";
+	public static final String STEPSELECTORL = "Steps:";
 	public static final int STEPSELECTORMIN = 500;
 	public static final int STEPSELECTORMAX = 10000;
 	public static final int STEPSIZE = 500;
 	
-	public static final String DELTATIMESELECTORLABEL = "Delta_Time:";
+	public static final String DELTATIMESELECTORL = "Delta_Time:";
 	
-	public static final String DELAYSELECTORLABEL = "Delay: ";
+	public static final String DELAYSELECTORL = "Delay: ";
 	public static final int DELAYSELECTORMIN = 0;
 	public static final int DELAYSELECTORMAX = 1000;
 	public static final int DELAYSTEP = 1;
@@ -215,8 +215,8 @@ public class ControlPanel extends JPanel implements SimulatorObserver{
 		bar.add(initStop());
 		bar.addSeparator();
 		
-		JLabel lDelaySelector = new JLabel(DELAYSELECTORLABEL);
-		lDelaySelector.setLabelFor(delaySelector);
+		JL lDelaySelector = new JL(DELAYSELECTORL);
+		lDelaySelector.setLFor(delaySelector);
 		delaySelector = new JSpinner(new SpinnerNumberModel(1, DELAYSELECTORMIN, DELAYSELECTORMAX, DELAYSTEP));
 		delaySelector.setMaximumSize(new Dimension(60, 40));
 		delaySelector.setPreferredSize(new Dimension(60, 40));
@@ -225,8 +225,8 @@ public class ControlPanel extends JPanel implements SimulatorObserver{
 		bar.add(delaySelector);
 		bar.addSeparator();
 		
-		JLabel lStepSelector = new JLabel(STEPSELECTORLABEL);
-		lStepSelector.setLabelFor(stepSelector);
+		JL lStepSelector = new JL(STEPSELECTORL);
+		lStepSelector.setLFor(stepSelector);
 		stepSelector = new JSpinner(new SpinnerNumberModel(500, STEPSELECTORMIN, STEPSELECTORMAX, STEPSIZE));
 		stepSelector.setMaximumSize(new Dimension(60, 40));
 		stepSelector.setPreferredSize(new Dimension(60, 40));
@@ -235,9 +235,9 @@ public class ControlPanel extends JPanel implements SimulatorObserver{
 		bar.add(stepSelector);
 		bar.addSeparator();
 		
-		JLabel lDeltaTimeSelector = new JLabel(DELTATIMESELECTORLABEL);
+		JL lDeltaTimeSelector = new JL(DELTATIMESELECTORL);
 		deltaTimeSelector = new JTextField(); 
-		lDeltaTimeSelector.setLabelFor(deltaTimeSelector);
+		lDeltaTimeSelector.setLFor(deltaTimeSelector);
 		deltaTimeSelector.setMaximumSize(new Dimension(1, 50));
 		deltaTimeSelector.setColumns(5);
 		bar.add(lDeltaTimeSelector);

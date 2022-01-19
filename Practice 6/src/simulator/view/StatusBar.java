@@ -5,7 +5,7 @@ import java.awt.FlowLayout;
 import java.util.List;
 
 import javax.swing.BorderFactory;
-import javax.swing.JLabel;
+import javax.swing.JL;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
@@ -14,19 +14,19 @@ import simulator.model.Body;
 import simulator.model.SimulatorObserver;
 
 public class StatusBar extends JPanel implements SimulatorObserver{
-	private JLabel currentTime; // for current time
-	private JLabel currentLaw; // for gravity laws
-	private JLabel numOfBodies; // for number of bodies
+	private JL currentTime; // for current time
+	private JL currentLaw; // for gravity laws
+	private JL numOfBodies; // for number of bodies
 	
-	public static final JLabel CURRENTTIMELABEL = new JLabel("Time: ");
-	public static final JLabel CURRENTLAWLABEL = new JLabel("Laws: ");
-	public static final JLabel NUMOFBODIESLABEL = new JLabel("Bodies: ");
-	public static final JLabel LAWSLABEL = new JLabel("Laws: ");
+	public static final JL CURRENTTIMEL = new JL("Time: ");
+	public static final JL CURRENTLAWL = new JL("Laws: ");
+	public static final JL NUMOFBODIESL = new JL("Bodies: ");
+	public static final JL LAWSL = new JL("Laws: ");
 	
 	StatusBar(Controller controller) {
-	currentTime = new JLabel();
-	currentLaw = new JLabel();
-	numOfBodies = new JLabel();
+	currentTime = new JL();
+	currentLaw = new JL();
+	numOfBodies = new JL();
 	initGUI();
 	controller.addObserver(this);
 	}
@@ -35,23 +35,23 @@ public class StatusBar extends JPanel implements SimulatorObserver{
 	this.setLayout( new FlowLayout( FlowLayout.LEFT ));
 	this.setBorder( BorderFactory.createBevelBorder( 1 ));
     
-	CURRENTTIMELABEL.setLabelFor(currentTime);
-	this.add(CURRENTTIMELABEL);
+	CURRENTTIMEL.setLFor(currentTime);
+	this.add(CURRENTTIMEL);
 	
 
-	CURRENTTIMELABEL.setLabelFor(currentTime);
-	this.add(CURRENTTIMELABEL);
+	CURRENTTIMEL.setLFor(currentTime);
+	this.add(CURRENTTIMEL);
 	currentTime.setPreferredSize(new Dimension(100, 20));
 	this.add(currentTime);
 	
-	NUMOFBODIESLABEL.setLabelFor(currentTime);
-	this.add(NUMOFBODIESLABEL);
+	NUMOFBODIESL.setLFor(currentTime);
+	this.add(NUMOFBODIESL);
 	numOfBodies.setPreferredSize(new Dimension(200, 20));
 	this.add(numOfBodies);
 	
-	CURRENTTIMELABEL.setLabelFor(currentLaw);
+	CURRENTTIMEL.setLFor(currentLaw);
 	currentLaw.setPreferredSize(new Dimension(1000, 20));
-	this.add(LAWSLABEL);
+	this.add(LAWSL);
 	this.add(currentLaw);;
 	
 	}

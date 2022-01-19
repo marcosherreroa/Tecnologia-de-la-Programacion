@@ -1,4 +1,4 @@
-//Flavius Ciapsa y Marcos Herrero
+//  y  
 
 package tp.p3.logic;
 
@@ -390,24 +390,24 @@ public class Game {
 		// the attribute contents are not empty
 		if (!contentString.equals("")) {
 			if (!isList) {
-				// split non−list attribute contents into words
-				// using 1−or−more−white−spaces as separator
+				// split non???list attribute contents into words
+				// using 1???or???more???white???spaces as separator
 				words = contentString.split("\\s");
-				// a non−list attribute with contents of more than one word is
+				// a non???list attribute with contents of more than one word is
 				// invalid
 				if (words.length != 1)
 					throw new FileContentsException(lineTooLongMsg + prefix);
 			} else
 				// split list attribute contents into words
-				// using comma+0−or−more−white−spaces as separator
+				// using comma+0???or???more???white???spaces as separator
 				words = contentString.split(",\\s*");
 			// the attribute contents are empty
 		} else {
-			// a non−list attribute with empty contents is invalid
+			// a non???list attribute with empty contents is invalid
 			if (!isList)
 				throw new FileContentsException(lineTooShortMsg + prefix);
 			// a list attibute with empty contents is valid;
-			// use a zero−length array to store its words
+			// use a zero???length array to store its words
 			words = new String[0];
 		}
 		return words;
